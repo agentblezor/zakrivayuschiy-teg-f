@@ -1,7 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --bg-gradient: repeating-linear-gradient(90deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
+  --bg-gradient: repeating-linear-gradient(
+      90deg,
+      #d3d3d3 0 2px,
+      rgb(0 0 0 / 0) 2px 4px
+    ),
     repeating-linear-gradient(180deg, #d3d3d3 0 2px, rgb(0 0 0 / 0) 2px 4px),
     linear-gradient(180deg, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
   --bg-color: #fff;
@@ -9,7 +13,7 @@
   --accent-color: #f00;
   --bg-btn-color: transparent;
   --main-font: "Inter Variable";
-  --accent-font: "PressStart2P Regular";
+  --accent-font: "PressStart2P";
   --line-height: 1.18;
   --font-weight-text: 400;
   --font-weight-title: 700;
@@ -21,25 +25,31 @@
   --border: 0.125rem solid var(--contrast-color);
 }
 
-
 .card__title {
   --line-height: 1.22;
 }
-
 
 .button {
   --line-height: 0.9;
 }
 
-.footer__button button, .dialog[open] {
+.dialog[open] {
+  --section-inline-size: clamp(20.375rem, 8.923vw + 18.284rem, 22.188rem);
+}
+
+.footer__button button {
   --section-inline-size: clamp(19.125rem, 8.923vw + 17.034rem, 20.938rem);
- 
 }
 
 @media (width <= 375px) {
   :root {
     --logo-text-size: clamp(2.375rem, -1.625rem + 20vw, 3.0625rem);
     --section-inline-size: 100%;
-    --header-padding: clamp(5.625rem, 54.545vw - 5.284rem, 7.5rem);
+    --header-mobile-block-padding: clamp(5.625rem, 54.545vw - 5.284rem, 7.5rem);
+    --header-mobile-inline-padding: clamp(
+      2.5rem,
+      54.545vw - 8.409rem,
+      4.375rem
+    );
   }
 }
