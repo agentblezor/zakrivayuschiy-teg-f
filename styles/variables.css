@@ -13,7 +13,7 @@
   --accent-color: #f00;
   --bg-btn-color: transparent;
   --main-font: "Inter Variable";
-  --accent-font: "PressStart2P";
+  --accent-font: "PressStart2P"; 
   --line-height: 1.18;
   --font-weight-text: 400;
   --font-weight-title: 700;
@@ -21,7 +21,8 @@
   --logo-font-size: clamp(3.0625rem, 2.4427rem + 2.6446vw, 4.0625rem);
   --heading-font-size: clamp(0.875rem, 0.5263rem + 1.4876vw, 1.4375rem);
   --section-inline-size: clamp(23.438rem, 50.077vw + 11.701rem, 43.75rem);
-  --header-padding: clamp(7.5rem, 1.322vw + 7.19rem, 8rem);
+  --header-block-padding: clamp(7.5rem, 1.322vw + 7.19rem, 8rem);
+  --header-inline-padding: clamp(3.75rem, 1.322vw + 3.44rem, 4.25rem);
   --border: 0.125rem solid var(--contrast-color);
 }
 

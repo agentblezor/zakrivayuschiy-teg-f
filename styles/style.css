@@ -10,24 +10,24 @@
 
 */
 .page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   font-family: var(--main-font), sans-serif;
-  font-variation-settings: "wght" var(--font-weight-text);
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
-  background-size: cover;
   background-position: center center;
+  background-size: cover;
   background-attachment: fixed;
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
+  font-variation-settings: "wght" var(--font-weight-text);
 }
 
 header {
   display: flex;
-  font-family: var(--accent-font), fantasy;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
   padding-top: 100px;
+  font-family: var(--accent-font), fantasy;
   text-transform: uppercase;
 }
 .header__title {
@@ -35,42 +35,42 @@ header {
 }
 
 .header__subtitle {
-  font-size: var(--heading-font-size);
   margin-top: 20px;
+  font-size: var(--heading-font-size);
 }
 
 .header__wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: var(--header-padding);
   width: var(--section-inline-size);
+  padding-inline: var(--header-inline-padding);
+  padding-block: var(--header-block-padding);
   background-color: var(--bg-color);
 }
 
 .main {
   display: flex;
-  margin-top: 100px;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   gap: 50px;
+  margin-top: 100px;
 }
 
 .card {
-  width: var(--section-inline-size);
-  background-color: var(--bg-color);
   position: relative;
-  max-width: 100%;
   box-sizing: border-box;
+  width: var(--section-inline-size);
+  max-width: 100%;
+  background-color: var(--bg-color);
 }
 
 .card__title {
-  /* line-height: var(--line-height); */
-  line-height: 1.33;
-  padding-block: 3px;
   padding-inline-start: 10px;
+  padding-block: 3px;
+  line-height: 1.33;
   letter-spacing: -0.4px;
   font-variation-settings: "wght" var(--font-weight-title);
 }
@@ -80,14 +80,14 @@ header {
 }
 
 .title__wrapper {
-  border-bottom: 2px solid var(--contrast-color);
   box-sizing: content-box;
+  border-bottom: 2px solid var(--contrast-color);
 }
 
 .description__wrapper {
-  padding: 25px;
-  border-top: 2px solid var(--contrast-color);
   box-sizing: content-box;
+  border-top: 2px solid var(--contrast-color);
+  padding: 25px;
 }
 
 .img__wrapper {
@@ -136,9 +136,8 @@ img {
 
 .description__text {
   font-size: var(--primary-font-size);
-  /* line-height: var(--line-height); */
-  letter-spacing: 0px;
   line-height: 1.18;
+  letter-spacing: 0px;
 }
 
 .description__text p:last-child {
@@ -147,18 +146,18 @@ img {
 
 .img__wrapper span {
   position: absolute;
-  font-family: var(--accent-font), fantasy;
-  font-size: 14px;
-  font-weight: 400;
   right: 25px;
-  color: var(--contrast-color);
+  z-index: 10;
+  padding-top: 27px;
   opacity: 0.5;
-  mix-blend-mode: hard-light;
+  color: var(--contrast-color);
+  font-family: var(--accent-font), fantasy;
+  font-weight: 400;
+  font-size: 14px;
   text-shadow: -1px -1px 0 rgba(255, 255, 255, 1),
     1px -1px 0 rgba(255, 255, 255, 1), -1px 1px 0 rgba(255, 255, 255, 1),
     1px 1px 0 rgba(255, 255, 255, 1);
-  padding-top: 27px;
-  z-index: 10;
+  mix-blend-mode: hard-light;
 }
 @supports (-webkit-text-stroke: 1px white) or (text-stroke: 1px white) {
   .img__wrapper span {
@@ -169,17 +168,17 @@ img {
 }
 
 button {
-  font-family: var(--accent-font);
-  cursor: pointer;
   outline: none;
+  font-family: var(--accent-font), fantasy;
+  cursor: pointer;
 }
 
 .button__style {
-  display: flex;
   position: relative;
-  overflow: hidden;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
   background-color: inherit;
 }
 
@@ -193,13 +192,13 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  z-index: 0;
   width: 100%;
+  height: 100%;
   background: var(--contrast-color);
+  transition: transform 0.5s ease-in-out;
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.5s ease-in-out;
-  z-index: 0;
 }
 
 .button__style:hover::before {
@@ -209,27 +208,27 @@ button {
 .card__buttons {
   display: flex;
   justify-content: flex-end;
-  padding-top: 22px;
+  padding-top: 24px;
 }
 
 .card__like-button {
-  height: 38px;
   width: 130px;
+  height: 38px;
   margin-left: 6px;
 }
 
 .card__icon-button {
-  background-color: transparent;
-  outline: none;
-  border: 2px solid transparent;
-  height: 38px;
-  width: 38px;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: border-color 0.3s ease;
+  width: 38px;
+  height: 38px;
   margin: 0;
+  border: 2px solid transparent;
   padding: 0;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s ease;
 }
 
 .card__icon-button:focus {
@@ -245,29 +244,38 @@ button {
   justify-content: center;
   padding-top: 50px;
   padding-bottom: 105px;
+  color: var(--contrast-color);
+}
+
+.footer__button button:hover {
+  color: var(--bg-color);
 }
 
 .footer__button button {
-  padding: 15px;
   flex-direction: row;
-  border: var(--border);
   width: var(--section-inline-size);
+  border: var(--border);
+  padding: 15px;
   background-color: var(--bg-color);
 }
 
 .footer__button svg {
+  position: relative;
   width: 21px;
   height: 21px;
   margin-right: 10px;
+  fill: var(--bg-color);
+  pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 .button__text {
-  white-space: nowrap;
   position: relative;
-  font-size: 14px;
-  mix-blend-mode: difference;
   color: var(--bg-color);
+  font-size: 14px;
   pointer-events: none;
+  white-space: nowrap;
+  mix-blend-mode: difference;
 }
 
 .dialog__svg__wrapper {
@@ -276,31 +284,30 @@ button {
 
 .dialog[open] {
   width: var(--section-inline-size);
-  opacity: 50%;
   padding: 30px;
 }
 
 .dialog[open] .dialog__description {
-  gap: 20px;
   display: flex;
   flex-direction: row;
+  gap: 20px;
   font-family: var(--accent-font), fantasy;
-  text-transform: uppercase;
-  line-height: 150%;
   font-size: 14px;
+  line-height: 150%;
+  text-transform: uppercase;
 }
 
 .dialog[open] .dialog__window {
-  gap: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 30px;
 }
 
 .dialog_button {
-  background-color: var(--bg-color);
   width: 100%;
   height: 38px;
+  background-color: var(--bg-color);
 }
 
 .dialog::backdrop {
@@ -320,14 +327,14 @@ button {
 
 .like-icon .core {
   fill: transparent;
-  transition-duration: 0.3s;
   transition-delay: 0s;
+  transition-duration: 0.3s;
 }
 
 .like-icon .main-body {
   fill: transparent;
-  transition-duration: 0.3s;
   transition-delay: 0.05s;
+  transition-duration: 0.3s;
 }
 
 .card__icon-button:hover .like-icon .core {
@@ -403,14 +410,14 @@ button {
 
 @media (width <= 375px) {
   .header__wrapper {
-    padding-inline: var(----header-mobile-inline-padding);
-    padding-block: var(--header-mobile-block-padding);
     width: 100%;
+    padding-inline: var(--header-mobile-inline-padding);
+    padding-block: var(--header-mobile-block-padding);
   }
   .card__title {
-    letter-spacing: -0.45px;
-    line-height: 1.26;
     padding-inline: 10px;
+    line-height: 1.24;
+    letter-spacing: -0.45px;
   }
   .main {
     gap: 52px;
@@ -420,12 +427,8 @@ button {
     font-size: var(--heading-font-size);
   }
   .img__wrapper span {
-    right: 13px;
     top: -5px;
-  }
-
-  .card__buttons {
-    padding-top: 24px;
+    right: 13px;
   }
 
   .description__text {
@@ -436,20 +439,21 @@ button {
   .footer__button svg {
     width: 28px;
     height: 28px;
+    margin-left: 10px;
   }
 
   .footer__button button {
     flex-direction: column;
     align-items: center;
-    min-height: 80px;
     row-gap: 8px;
+    min-height: 80px;
   }
   .dialog[open] {
     width: clamp(21.625rem, 8.923vw + 19.534rem, 23.438rem);
-    opacity: 50%;
-    padding-inline: 38px;
     padding-top: 30px;
     padding-bottom: 28px;
+    padding-inline: 38px;
+    opacity: 50%;
   }
 
   .dialog_button {
