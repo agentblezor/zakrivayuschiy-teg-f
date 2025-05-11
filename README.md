@@ -1,1 +1,2 @@
-https://agentblezor.github.io/zakrivayuschiy-teg-f/zakrivayuschiy-teg-f-main/
+сайт:  https://agentblezor.github.io/zakrivayuschiy-teg-f
+репозиторий:  https://github.com/agentblezor/zakrivayuschiy-teg-f
